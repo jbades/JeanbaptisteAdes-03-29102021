@@ -1,0 +1,45 @@
+nav {
+    width: 100%;
+    box-shadow: 0px 5px 5px rgb(0 0 0 / 15%);
+    text-align: center;
+    z-index: 1;
+}
+
+.headerblock {
+    display: flex;
+    flex-flow: column nowrap;
+    &__logo {
+        height: 45px;
+        margin: 20px 0 10px 0;
+    }
+    &__localization {
+        background-color: $grey;
+        text-align: right;
+        padding: 15px 0;
+        & span {
+            font-weight: 500;
+        }
+        & div {
+            color: $dark-grey;
+        }
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, smartphone)) {
+
+    .headerblock {
+        align-items: center;
+        &__logo {
+            height: 30px;
+        }
+        &__localization {
+            width: 100%;
+            text-align: center;
+            order: 2;
+            & div {
+                    justify-content: center;
+                    padding: 10px 0;
+                }
+        }
+    }
+}

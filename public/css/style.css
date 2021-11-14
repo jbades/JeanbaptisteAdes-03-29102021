@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.h-boxed {
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 20px;
+}
+.h-boxed--home-cta {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.v-boxed {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 570px) {
+  .h-boxed {
+    z-index: 1;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .h-boxed__home-cta {
+    max-width: 240px;
+  }
+}
+nav {
+  width: 100%;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  z-index: 1;
+}
+
+.headerblock {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.headerblock__logo {
+  height: 45px;
+  margin: 20px 0 10px 0;
+}
+.headerblock__localization {
+  background-color: #eaeaea;
+  text-align: right;
+  padding: 15px 0;
+}
+.headerblock__localization span {
+  font-weight: 500;
+}
+.headerblock__localization div {
+  color: #353535;
+}
+
+@media screen and (max-width: 570px) {
+  .headerblock {
+    align-items: center;
+  }
+  .headerblock__logo {
+    height: 30px;
+  }
+  .headerblock__localization {
+    width: 100%;
+    text-align: center;
+    order: 2;
+  }
+  .headerblock__localization div {
+    justify-content: center;
+    padding: 10px 0;
+  }
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+footer {
+  background-color: #353535;
+}
+
+.footerblock {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+.footerblock__element a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 10px 0 0;
+}
+.footerblock__element a i {
+  padding: 0 7px 0 0;
+}
+.footerblock__column {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.iconblock {
+  display: inline;
+}
+.iconblock i {
+  padding-right: 15px;
+}
+
+.heading-lev1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.button-v1 {
+  background: #FF79DA;
+  background: linear-gradient(174deg, #FF79DA 0%, #9356DC 70%);
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+  max-width: 275px;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 570px) {
+  .heading-lev1 {
+    font-size: 27px;
+  }
+}
+.cta-block {
+  background-color: #f6f6f6;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.cta-block__claim {
+  font-weight: 200;
+  padding: 10px 0;
+}
+.cta-block a {
+  display: block;
+  margin: 15px auto;
+}
+
+.flow-demo ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding-left: 0;
+}
+
+.flow-bullet {
+  display: inline-flex;
+  background-color: #f6f6f6;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+  padding: 25px 0;
+  text-align: center;
+  border-radius: 20px;
+  min-width: 250px;
+  max-width: 350px;
+  margin: 10px 0;
+}
+.flow-bullet div {
+  background-color: #9356DC;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 2px;
+  width: 20px;
+  border-radius: 50%;
+  position: relative;
+  left: -10px;
+  margin-right: 5%;
+}
+.flow-bullet i {
+  color: #353535;
+}
+.flow-bullet span {
+  font-size: 15px;
+  font-weight: 500;
+}
+.flow-bullet:hover {
+  background-color: #f5edff;
+}
+.flow-bullet:hover i {
+  color: #9356DC;
+}
+
+.cafe-portfolio {
+  background-color: #f6f6f6;
+}
+.cafe-portfolio__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.cafe-card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+  margin: 10px 0;
+  border-radius: 15px;
+  min-width: 260px;
+}
+.cafe-card__img {
+  height: 175px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.cafe-card__body {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 10px;
+}
+.cafe-card__body__cafe-name {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.cafe-card__body__cafe-name a {
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.cafe-card__body a {
+  text-decoration: none;
+  color: inherit;
+}
+.cafe-card__body i {
+  font-size: 25px;
+}
+
+@media screen and (min-width: 1280px) {
+  .flow-demo ul {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 570px) {
+  .cta-block h1 {
+    padding: 0 5px;
+  }
+  .cta-block a {
+    font-size: 16px;
+    max-width: 215px;
+  }
+
+  .flow-bullet {
+    width: 100%;
+  }
+
+  .cafe-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}

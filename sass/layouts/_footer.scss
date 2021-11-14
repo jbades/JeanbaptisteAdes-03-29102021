@@ -1,0 +1,22 @@
+footer {
+    background-color: $dark-grey;
+}
+
+.footerblock {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 20px;
+    &__element a {
+        color: $white;
+        text-decoration: none;
+        padding: 0 10px 0 0;
+        i {
+            padding: 0 7px 0 0;
+        }
+    }
+    &__column {
+        display: flex;
+        flex-flow: row wrap;
+    }
+}

@@ -1,0 +1,140 @@
+.cta-block {
+    background-color: $light-grey;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    &__claim {
+        font-weight: 200;
+        padding: 10px 0;
+    }
+    & a {
+        display: block;
+        margin: 15px auto;
+    }
+}
+
+.flow-demo {
+    & ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        padding-left: 0;
+    }
+
+}
+
+.flow-bullet {
+    display: inline-flex;
+    background-color: $light-grey;
+    box-shadow: 0px 5px 5px rgb(0 0 0 / 15%);
+    padding: 25px 0;
+    text-align: center;
+    border-radius: 20px;
+    min-width: 250px;
+    max-width: 350px;
+    margin: 10px 0;
+    & div {
+        background-color: $primary;
+        font-size: 14px;
+        color: $white;
+        padding: 2px;
+        width: 20px;
+        border-radius: 50%;
+        position: relative;
+        left: -10px;
+        margin-right: 5%;
+    }
+    & i {
+        color: $dark-grey;
+    }
+    & span {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    &:hover {
+        background-color: $light-primary;
+        & i {
+            color: $primary;
+        }
+    }
+}
+
+.cafe-portfolio {
+    background-color: $light-grey;
+    &__wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+}
+
+.cafe-card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    background-color: $white;
+    box-shadow: 0px 5px 5px rgb(0 0 0 / 15%);
+    margin: 10px 0;
+    border-radius: 15px;
+    min-width: 260px;
+    &__img {
+        height: 175px;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    &__body {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 10px;
+        &__cafe-name {
+            display: flex;
+            flex-flow: column nowrap;
+            & a {
+                font-weight: 500;
+                padding-bottom: 5px;
+            }
+        }
+        & a {
+            text-decoration: none;
+            color: inherit;
+        }
+        & i {
+            font-size: 25px;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($breakpoints, large-screen)) {
+    .flow-demo {
+        & ul {
+            width: 75%;
+            margin: 0 auto;
+        }
+    }
+        
+}
+
+@media screen and (max-width: map-get($breakpoints, smartphone)) {
+    .cta-block {
+        & h1 {
+            padding: 0 5px;
+        }
+        & a {
+            font-size: 16px;
+            max-width: 215px;            
+        }
+    }
+
+    .flow-bullet {
+        width: 100%;
+    }
+
+    .cafe-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
