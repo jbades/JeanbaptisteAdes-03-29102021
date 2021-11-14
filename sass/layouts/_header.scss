@@ -8,6 +8,15 @@ nav {
 .headerblock {
     display: flex;
     flex-flow: column nowrap;
+    &__back-arrow {
+        position: absolute;
+        left: 5%;
+        top: 31px;
+        & i {
+            font-size: 25px;
+            color: $black;
+        }
+    }
     &__logo {
         height: 45px;
         margin: 20px 0 10px 0;

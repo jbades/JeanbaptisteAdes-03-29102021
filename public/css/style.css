@@ -42,6 +42,15 @@ nav {
   display: flex;
   flex-flow: column nowrap;
 }
+.headerblock__back-arrow {
+  position: absolute;
+  left: 5%;
+  top: 31px;
+}
+.headerblock__back-arrow i {
+  font-size: 25px;
+  color: #000000;
+}
 .headerblock__logo {
   height: 45px;
   margin: 20px 0 10px 0;
