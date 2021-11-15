@@ -1,0 +1,100 @@
+main>div {
+    background-image: url(../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-size: cover;
+    height: 50vh;
+}
+
+.cafe {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: $light-grey;
+    width: 90%;
+    margin: 0 auto;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    padding: 20px;
+    position: relative;
+    top: -20vh;
+    &__header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 20px 0;
+        &__heading {
+            font-family: "Shrikhand", sans-serif;
+            margin: auto 0;            
+        }
+        & i {
+            font-size: 40px;
+            padding-right: 25px;
+        }
+    }
+    &__dish-category {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        & h2 {
+            text-transform: uppercase;
+            color: $dark-grey;
+            border-bottom: $tertiary 3px solid;
+            padding-bottom: 5px;
+            width: 7%;
+        }
+    }
+    &__dish-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+}
+
+.dish-card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    background-color: $white;
+    box-shadow: 0px 5px 5px rgb(0 0 0 / 15%);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    max-width: 350px;
+    &__heading {
+        font-weight: 500;
+        margin: 0;
+        padding-bottom: 5px;
+        font-size: 20px;
+    }
+    &__body {
+        display: inline-flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        &__ingredient {
+            font-weight: 200;
+            font-size: 17px;
+        }
+        &__price {
+            font-weight: 500;
+        }
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, smartphone)) {
+        main>div {
+            height: 30vh;
+        }
+        
+        .cafe {
+        width: 100%;
+        margin: 0;
+        top: -5vh;
+        }
+
+        .dish-card {
+            max-width: none;
+            width: 100%;
+        }
+}
