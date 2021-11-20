@@ -1,3 +1,34 @@
+.spinner-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    z-index: -1;
+    animation: temp-load 2500ms;
+    background-color: $white;
+    & div {
+        font-family: "Shrikhand", sans-serif;
+        width: fit-content;
+        margin: auto;       
+        font-size: map-get($heading-size, h1); 
+    }
+    & div::after {
+        content: "";
+        display: inherit;
+        position: relative;
+        margin: 20px auto 0px auto;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: 6px solid $white;
+        border-color: $primary transparent $secondary transparent;
+        animation: spinner 700ms linear infinite;
+    }
+}
+
 .iconblock {
     display: inline;
     &--footer {
@@ -10,7 +41,7 @@
 }
 
 .heading-lev1 {
-    font-size: 32px;
+    font-size: map-get($heading-size, h1);
     font-weight: 600;
     margin: 0;
 }
@@ -33,6 +64,7 @@
     &--restaurant {
         padding: 15px 60px;
     }
+/*    &:hover {}*/
 }
 
 @media screen and (max-width: map-get($breakpoints, smartphone)) {
