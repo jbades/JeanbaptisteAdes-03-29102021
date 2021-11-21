@@ -204,7 +204,6 @@ footer {
 }
 
 .button-v1 {
-  background: #FF79DA;
   background: linear-gradient(174deg, #FF79DA 0%, #9356DC 70%);
   color: #ffffff;
   font-weight: 400;
@@ -214,7 +213,9 @@ footer {
   margin: 0 auto;
   border-radius: 30px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
-  /*    &:hover {}*/
+  opacity: 1;
+  position: relative;
+  z-index: 1;
 }
 .button-v1--home {
   padding: 15px 30px;
@@ -222,6 +223,23 @@ footer {
 }
 .button-v1--restaurant {
   padding: 15px 60px;
+}
+.button-v1:hover::after {
+  opacity: 1;
+}
+.button-v1::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background: linear-gradient(174deg, #ffb0f7 0%, #be91f5 70%);
+  border-radius: 30px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
 @media screen and (max-width: 570px) {
@@ -280,7 +298,7 @@ footer {
   font-weight: 500;
 }
 .flow-bullet:hover {
-  background-color: #f5edff;
+  background-color: #be91f5;
 }
 .flow-bullet:hover i {
   color: #9356DC;

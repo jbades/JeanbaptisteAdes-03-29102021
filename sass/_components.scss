@@ -47,7 +47,6 @@
 }
 
 .button-v1 {
-    background: $secondary;
     background: linear-gradient(174deg, $secondary 0%, $primary 70%);
     color: $white;
     font-weight: 400;
@@ -57,6 +56,9 @@
     margin: 0 auto;
     border-radius: 30px;
     box-shadow: 0px 5px 5px rgb(0 0 0 / 15%);
+    opacity: 1;
+    position: relative;
+    z-index: 1;
     &--home {
         padding: 15px 30px;
         margin: 15px auto;
@@ -64,7 +66,25 @@
     &--restaurant {
         padding: 15px 60px;
     }
-/*    &:hover {}*/
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content:"";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        background: linear-gradient(174deg, $light-secondary 0%, $light-primary 70%);
+        border-radius: 30px;
+        box-shadow: 0px 5px 5px rgb(0 0 0 / 30%);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
 }
 
 @media screen and (max-width: map-get($breakpoints, smartphone)) {
