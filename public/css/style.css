@@ -42,41 +42,44 @@
 @media screen and (max-width: 570px) {
   .h-boxed {
     z-index: 1;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
   .h-boxed__home-cta {
     max-width: 240px;
   }
 }
-nav {
-  width: 100%;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  z-index: 1;
-}
-
 .headerblock {
   display: flex;
   flex-flow: column nowrap;
+  margin: 0 auto;
 }
 .headerblock__back-arrow {
   position: absolute;
-  left: 5%;
-  top: 31px;
+  top: 80px;
+  padding-left: 25px;
 }
 .headerblock__back-arrow i {
   font-size: 25px;
   color: #000000;
 }
+.headerblock section {
+  width: 100vw;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+}
 .headerblock__logo {
-  height: 45px;
+  display: block;
+  text-align: center;
+}
+.headerblock__logo img {
+  height: 40px;
   margin: 20px 0 10px 0;
 }
 .headerblock__localization {
   background-color: #eaeaea;
   text-align: right;
   padding: 15px 0;
+  box-shadow: inherit !important;
 }
 .headerblock__localization span {
   font-weight: 500;
@@ -84,13 +87,15 @@ nav {
 .headerblock__localization div {
   color: #353535;
 }
+.headerblock nav {
+  max-width: 1320px;
+  margin: 0 auto;
+  z-index: 1;
+}
 
 @media screen and (max-width: 570px) {
   .headerblock {
     align-items: center;
-  }
-  .headerblock__logo {
-    height: 30px;
   }
   .headerblock__back-arrow {
     top: 22px;
@@ -99,6 +104,7 @@ nav {
     width: 100%;
     text-align: center;
     order: 2;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15) !important;
   }
   .headerblock__localization div {
     justify-content: center;
@@ -124,16 +130,18 @@ footer {
   font-family: "Shrikhand", sans-serif;
   text-decoration: none;
   color: #ffffff;
+  position: relative;
+  top: 4px;
 }
 .footerblock__element a {
   color: #ffffff;
   text-decoration: none;
-  margin: auto 0;
+  margin: auto 15px auto 0;
   position: relative;
   top: 3px;
 }
 .footerblock__element a i {
-  padding: 0 7px 0 0;
+  padding: 0 4px 0 0;
 }
 .footerblock__element a span {
   font-weight: 400;
@@ -201,6 +209,7 @@ footer {
   font-size: 32px;
   font-weight: 600;
   margin: 0;
+  padding-bottom: 20px;
 }
 
 .button-v1 {
@@ -298,7 +307,7 @@ footer {
   font-weight: 500;
 }
 .flow-bullet:hover {
-  background-color: #be91f5;
+  background-color: #f5edff;
 }
 .flow-bullet:hover i {
   color: #9356DC;
@@ -388,6 +397,7 @@ main > div {
   justify-content: flex-start;
   align-items: stretch;
   background-color: #f6f6f6;
+  max-width: 1320px;
   width: 90%;
   margin: 0 auto;
   border-top-right-radius: 25px;
@@ -406,9 +416,16 @@ main > div {
   font-family: "Shrikhand", sans-serif;
   margin: auto 0;
 }
-.cafe__header i {
-  font-size: 40px;
-  padding-right: 25px;
+.cafe__header div {
+  font-family: "Font Awesome 5 Free";
+  content: "\f004";
+  font-style: normal;
+  font-size: 30px;
+  font-weight: 300;
+}
+.cafe__header div:hover {
+  color: #FF79DA;
+  font-weight: 600;
 }
 .cafe__dish-category {
   display: flex;
@@ -421,7 +438,9 @@ main > div {
   color: #353535;
   border-bottom: #99E2D0 3px solid;
   padding-bottom: 5px;
+  max-width: 45px;
   width: 7%;
+  min-width: 25px;
 }
 .cafe__dish-list {
   display: flex;
@@ -438,8 +457,8 @@ main > div {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
   padding: 15px;
-  margin-bottom: 20px;
-  max-width: 350px;
+  margin: 0 auto 20px auto;
+  width: 416px;
 }
 .dish-card__heading {
   font-weight: 500;
@@ -460,6 +479,27 @@ main > div {
   font-weight: 500;
 }
 
+@media screen and (max-width: 1280px) {
+  .dish-card {
+    width: 290px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .cafe__dish-list {
+    justify-content: flex-start;
+  }
+
+  .dish-card {
+    max-width: none;
+    width: 45%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dish-card {
+    max-width: none;
+    width: 80%;
+  }
+}
 @media screen and (max-width: 570px) {
   main > div {
     height: 30vh;

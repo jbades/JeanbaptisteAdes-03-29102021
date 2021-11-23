@@ -10,6 +10,7 @@ main>div {
     justify-content: flex-start;
     align-items: stretch;
     background-color: $light-grey;
+    max-width: 1320px;
     width: 90%;
     margin: 0 auto;
     border-top-right-radius: 25px;
@@ -26,9 +27,16 @@ main>div {
             font-family: "Shrikhand", sans-serif;
             margin: auto 0;            
         }
-        & i {
-            font-size: 40px;
-            padding-right: 25px;
+        & div {
+            font-family: "Font Awesome 5 Free";
+            content: "\f004";
+            font-style: normal;
+            font-size: 30px;
+            font-weight: 300;
+            &:hover {
+                color: $secondary;
+                font-weight: 600;
+            }
         }
     }
     &__dish-category {
@@ -41,7 +49,9 @@ main>div {
             color: $dark-grey;
             border-bottom: $tertiary 3px solid;
             padding-bottom: 5px;
+            max-width: 45px;
             width: 7%;
+            min-width: 25px;
         }
     }
     &__dish-list {
@@ -60,8 +70,8 @@ main>div {
     box-shadow: 0px 5px 5px rgb(0 0 0 / 15%);
     border-radius: 15px;
     padding: 15px;
-    margin-bottom: 20px;
-    max-width: 350px;
+    margin: 0 auto 20px auto;
+    width: 416px;
     &__heading {
         font-weight: 500;
         margin: 0;
@@ -82,19 +92,45 @@ main>div {
     }
 }
 
-@media screen and (max-width: map-get($breakpoints, smartphone)) {
-        main>div {
-            height: 30vh;
-        }
-        
-        .cafe {
-        width: 100%;
-        margin: 0;
-        top: -5vh;
-        }
+@media screen and (max-width: map-get($breakpoints, large-screen)) {
+    .dish-card {
+        width: 290px;
+    }
+}
 
-        .dish-card {
-            max-width: none;
-            width: 100%;
+@media screen and (max-width: map-get($breakpoints, computer)) {
+    .cafe {
+        &__dish-list {
+            justify-content: flex-start;
         }
+    }
+    
+    .dish-card {
+        max-width: none;
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, tablet)) {
+    .dish-card {
+        max-width: none;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, smartphone)) {
+    main>div {
+        height: 30vh;
+    }
+    
+    .cafe {
+    width: 100%;
+    margin: 0;
+    top: -5vh;
+    }
+
+    .dish-card {
+        max-width: none;
+        width: 100%;
+    }
 }

@@ -11,16 +11,18 @@ footer {
         font-family: "Shrikhand", sans-serif;
         text-decoration: none;
         color: $white;
+        position: relative;
+        top: 4px;
     }
     &__element {
         & a {
             color: $white;
             text-decoration: none;
-            margin: auto 0;
+            margin: auto 15px auto 0;
             position: relative;
             top: 3px;
             i {
-                padding: 0 7px 0 0;
+                padding: 0 4px 0 0;
             }
             & span {
                 font-weight: 400;
