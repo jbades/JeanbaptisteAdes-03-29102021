@@ -19,7 +19,6 @@
         justify-content: space-around;
         padding-left: 0;
     }
-
 }
 
 .flow-bullet {
@@ -30,8 +29,9 @@
     text-align: center;
     border-radius: 20px;
     min-width: 250px;
-    max-width: 350px;
+    max-width: 300px;
     margin: 10px 0;
+    position: relative;
     & div {
         background-color: $primary;
         font-size: 14px;
@@ -51,10 +51,49 @@
         font-weight: 500;
     }
     &:hover {
-        background-color: #f5edff;
-        & i {
-            color: $primary;
+        &::after {
+            opacity: 1;
         }
+        & div {
+            opacity: 1;
+            z-index: 1;
+            &::after {
+                opacity: 0;
+                content: "";
+                @include pseudo-element-resetting;
+                z-index: -1;
+                transition: all 250ms;
+            }
+        }
+        & i {
+            opacity: 1;
+            z-index: 1;
+            &::after {
+                opacity: 0;
+                @include pseudo-element-resetting;
+                z-index: -1;
+                transition: all 250ms;
+            }
+        }
+        & span {
+            opacity: 1;
+            z-index: 1;
+            &::after {
+                opacity: 0;
+                content: "";
+                @include pseudo-element-resetting;
+                z-index: -1;
+                transition: all 250ms;
+            }
+        }
+    }
+    &::after {
+        opacity: 0;
+        content: "";
+        @include pseudo-element-resetting;
+        background-color: #f5edff;
+        border-radius: 20px;
+        transition: all 250ms;
     }
 }
 
@@ -129,6 +168,7 @@
 
     .flow-bullet {
         width: 100%;
+        min-width: inherit;
     }
 
     .cafe-card {

@@ -23,4 +23,12 @@ $heading-size: (
     h4: 26px,
     h5: 24px,
     h6: 22px
-)
+);
+
+@mixin pseudo-element-resetting {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
