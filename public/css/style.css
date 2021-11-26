@@ -389,6 +389,9 @@ footer {
   opacity: 1;
   z-index: 1;
 }
+.flow-bullet:hover i::before {
+  color: #9356DC;
+}
 .flow-bullet:hover i::after {
   opacity: 0;
   position: absolute;

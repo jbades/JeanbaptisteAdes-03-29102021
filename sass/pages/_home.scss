@@ -68,6 +68,9 @@
         & i {
             opacity: 1;
             z-index: 1;
+            &::before {
+                color: $primary;
+            }
             &::after {
                 opacity: 0;
                 @include pseudo-element-resetting;
