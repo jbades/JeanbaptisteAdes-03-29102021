@@ -118,6 +118,9 @@
     &--3 {
         animation: appear-up 750ms 500ms ease-out backwards;
     }
+    &--4 {
+        animation: appear-up 750ms 650ms ease-out backwards;
+    }
 }
 
 @media screen and (max-width: map-get($breakpoints, smartphone)) {
