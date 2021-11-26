@@ -106,6 +106,9 @@
             transition: opacity 3s ease-in-out 250ms, z-index 3s ease-in-out 250ms;
         }
     }
+    &::before {
+        cursor: pointer;
+    }
 }
 
 .appear-up {

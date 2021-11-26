@@ -301,6 +301,9 @@ footer {
   font-weight: 600;
   transition: opacity 3s ease-in-out 250ms, z-index 3s ease-in-out 250ms;
 }
+.fa-heart::before {
+  cursor: pointer;
+}
 
 .appear-up--1 {
   animation: appear-up 750ms 200ms ease-out backwards;
@@ -493,6 +496,9 @@ footer {
 }
 .cafe-card__body i {
   font-size: 25px;
+}
+.cafe-card__body i::before {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1280px) {
