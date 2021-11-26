@@ -85,15 +85,15 @@
   font-size: 25px;
   color: #000000;
 }
-.headerblock section {
-  width: 100vw;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+.headerblock__logo-wrapper {
+  width: fit-content;
+  margin: 0 auto;
 }
-.headerblock__logo {
+.headerblock__logo-wrapper__logo {
   display: block;
   text-align: center;
 }
-.headerblock__logo img {
+.headerblock__logo-wrapper__logo img {
   height: 40px;
   margin: 20px 0 10px 0;
 }
@@ -113,6 +113,10 @@
   max-width: 1320px;
   margin: 0 auto;
   z-index: 1;
+}
+.headerblock section {
+  width: 100vw;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
 }
 
 @media screen and (max-width: 570px) {
