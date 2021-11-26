@@ -29,7 +29,25 @@
     transform: rotate(360deg);
   }
 }
-@keyframes temp-load {
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear-up {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes disappear {
   0%, 80% {
     opacity: 1;
     z-index: 2;
@@ -40,6 +58,10 @@
   }
 }
 @media screen and (max-width: 570px) {
+  html, main {
+    overflow-x: hidden;
+  }
+
   .h-boxed {
     z-index: 1;
     padding-right: 20px;
@@ -173,7 +195,7 @@ footer {
   height: 100vh;
   opacity: 0;
   z-index: -1;
-  animation: temp-load 2500ms;
+  animation: disappear 2500ms;
   background-color: #ffffff;
 }
 .spinner-loader div {
@@ -239,16 +261,16 @@ footer {
   opacity: 1;
 }
 .button-v1::after {
+  opacity: 0;
   content: "";
   position: absolute;
   top: 0px;
-  left: 0px;
   bottom: 0px;
+  left: 0px;
   right: 0px;
   background: linear-gradient(174deg, #ffb0f7 0%, #be91f5 70%);
   border-radius: 30px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-  opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
 }
@@ -273,7 +295,17 @@ footer {
   -webkit-text-fill-color: transparent;
   z-index: -1;
   font-weight: 600;
-  transition: opacity 2s, z-index 2s;
+  transition: opacity 3s ease-in-out 250ms, z-index 3s ease-in-out 250ms;
+}
+
+.appear-up--1 {
+  animation: appear-up 750ms 200ms ease-out backwards;
+}
+.appear-up--2 {
+  animation: appear-up 750ms 350ms ease-out backwards;
+}
+.appear-up--3 {
+  animation: appear-up 750ms 500ms ease-out backwards;
 }
 
 @media screen and (max-width: 570px) {
@@ -516,59 +548,83 @@ main > div {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: stretch;
-}
-
-.fa-heart {
   position: relative;
-  font-family: "Font Awesome 5 Free";
-  content: "\f004";
-  font-style: normal;
-  font-size: 30px;
-  font-weight: 300;
-}
-.fa-heart:active {
-  opacity: 1;
-  z-index: 1;
-}
-.fa-heart:active::before {
-  top: 0;
-  right: 0;
-  background: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: -1;
-  font-weight: 600;
-  transition: opacity 2s, z-index 2s;
 }
 
 .dish-card {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   align-items: stretch;
   background-color: #ffffff;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
-  padding: 15px;
   margin: 0 auto 20px auto;
   width: 416px;
 }
-.dish-card__heading {
+.dish-card__description {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  padding: 15px;
+}
+.dish-card__description__heading {
   font-weight: 500;
   margin: 0;
   padding-bottom: 5px;
   font-size: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.dish-card__body {
+.dish-card__description__body {
   display: inline-flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-.dish-card__body__ingredient {
+.dish-card__description__body__ingredient {
   font-weight: 200;
   font-size: 17px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.dish-card__body__price {
+.dish-card__description__body__price {
   font-weight: 500;
+}
+.dish-card:hover .dish-card__order {
+  width: 25%;
+  cursor: pointer;
+}
+.dish-card:hover .dish-card__order::before {
+  opacity: 1;
+  transform: rotate(360deg);
+}
+.dish-card__order {
+  display: flex;
+  background-color: #99E2D0;
+  color: #ffffff;
+  width: 0%;
+  font-family: "Font Awesome 5 Free";
+  content: "\f058";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: all 250ms ease-out;
+}
+.dish-card__order::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f058";
+  font-weight: 600;
+  margin: auto;
+  font-size: 25px;
+  opacity: 0;
+  transform: rotate(0deg);
+  transition: all 300ms linear;
 }
 
 @media screen and (max-width: 1280px) {
@@ -600,7 +656,7 @@ main > div {
   .cafe {
     width: 100%;
     margin: 0;
-    top: -5vh;
+    margin-top: -5vh;
   }
 
   .dish-card {
