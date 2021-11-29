@@ -78,7 +78,7 @@
 }
 .headerblock__back-arrow {
   position: absolute;
-  top: 80px;
+  top: 28px;
   padding-left: 25px;
 }
 .headerblock__back-arrow i {
@@ -103,8 +103,11 @@
   padding: 15px 0;
   box-shadow: inherit !important;
 }
-.headerblock__localization span {
+.headerblock__localization input {
+  border: none;
+  background-color: #eaeaea;
   font-weight: 500;
+  width: 130px;
 }
 .headerblock__localization div {
   color: #353535;
@@ -137,6 +140,7 @@
     width: 100%;
     text-align: center;
     order: 2;
+    z-index: -1;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15) !important;
   }
   .headerblock__localization div {
@@ -233,6 +237,9 @@ footer {
 }
 .iconblock--footer {
   padding: 0 10px 10px 0;
+}
+.iconblock--localization {
+  padding-right: 0 !important;
 }
 .iconblock i {
   font-size: 15px;
@@ -464,6 +471,8 @@ footer {
   border-radius: 15px;
   min-width: 260px;
   position: relative;
+  text-decoration: none;
+  color: #000;
 }
 .cafe-card__img {
   height: 175px;
@@ -493,13 +502,8 @@ footer {
   display: flex;
   flex-flow: column nowrap;
 }
-.cafe-card__body__cafe-name a {
+.cafe-card__body__cafe-name__heading {
   font-weight: 500;
-  padding-bottom: 5px;
-}
-.cafe-card__body a {
-  text-decoration: none;
-  color: inherit;
 }
 .cafe-card__body i {
   font-size: 25px;

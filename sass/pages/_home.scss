@@ -120,6 +120,8 @@
     border-radius: 15px;
     min-width: 260px;
     position: relative;
+    text-decoration: none;
+    color: #000;
     &__img {
         height: 175px;
         object-fit: cover;
@@ -143,17 +145,12 @@
         justify-content: space-between;
         align-items: stretch;
         padding: 10px;
-        &__cafe-name {
+            &__cafe-name {
             display: flex;
             flex-flow: column nowrap;
-            & a {
+            &__heading {
                 font-weight: 500;
-                padding-bottom: 5px;
             }
-        }
-        & a {
-            text-decoration: none;
-            color: inherit;
         }
         & i {
             font-size: 25px;
