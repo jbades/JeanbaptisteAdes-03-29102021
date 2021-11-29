@@ -126,6 +126,13 @@
   .headerblock__back-arrow {
     top: 22px;
   }
+  .headerblock__back-arrow i::before {
+    font-size: 20px;
+  }
+  .headerblock__logo-wrapper__logo img {
+    height: 25px;
+    margin: 23px 0 7px 0;
+  }
   .headerblock__localization {
     width: 100%;
     text-align: center;
@@ -700,5 +707,11 @@ main > div {
 
   .dish-card {
     width: 100%;
+  }
+  .dish-card__description__heading {
+    white-space: inherit;
+  }
+  .dish-card__description__body__ingredient {
+    white-space: inherit;
   }
 }

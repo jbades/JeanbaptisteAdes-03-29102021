@@ -53,6 +53,21 @@
         &__back-arrow {
             top: 22px;
         }
+        &__back-arrow {
+            & i {
+                &::before {
+                    font-size: 20px;
+                }
+            }
+        }
+        &__logo-wrapper {
+            &__logo {
+                & img {
+                    height: 25px;
+                    margin: 23px 0 7px 0;
+                }
+            }
+        }
         &__localization {
             width: 100%;
             text-align: center;

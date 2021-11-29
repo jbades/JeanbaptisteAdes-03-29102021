@@ -182,5 +182,15 @@ main>div {
 
     .dish-card {
         width: 100%;
+        &__description {
+            &__heading {
+                white-space: inherit;
+            }
+            &__body {
+                &__ingredient {
+                    white-space: inherit;
+                }
+            }
+        }
     }
 }
