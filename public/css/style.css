@@ -301,6 +301,7 @@ footer {
 .fa-stack-1 {
   position: absolute;
   text-align: right;
+  font-style: normal;
   right: 10px;
   font-weight: 300;
 }
@@ -308,6 +309,7 @@ footer {
 .fa-stack-2 {
   position: absolute;
   text-align: right;
+  font-style: normal;
   right: 10px;
   font-weight: 600;
   background: -webkit-linear-gradient(#FF79DA, #9356DC);
