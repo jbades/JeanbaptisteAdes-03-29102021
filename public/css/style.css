@@ -306,21 +306,20 @@ footer {
   font-weight: 300;
 }
 
-.fa-stack-2 {
-  position: absolute;
-  text-align: right;
-  font-style: normal;
-  right: 10px;
-  font-weight: 600;
-  background: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .fa-stack-2:hover::before {
   opacity: 1;
 }
 .fa-stack-2::before {
   opacity: 0;
+  content: "";
+  position: absolute;
+  text-align: right;
+  font-style: normal;
+  right: 10px;
+  font-weight: 600;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transition: opacity 750ms ease-out;
 }
 
